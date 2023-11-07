@@ -1,7 +1,7 @@
 name: "Espressif IoT Development to freeRTOS"
 description: "This action builds your firmware for ESP32 directly in GitHub using FreeRTOS ESP-IDF Docker image."
 branding:
-  color: orange
+  color: green
   icon: wifi
 inputs:
   path:
@@ -10,7 +10,7 @@ inputs:
     required: false
   esp_idf_version:
     description: "Version of ESP-IDF docker image to use"
-    default: "latest"
+    default: "1"
     required: false
   target:
     description: "ESP32 variant to build for"
