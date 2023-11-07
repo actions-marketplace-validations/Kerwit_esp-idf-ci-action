@@ -18,7 +18,7 @@ inputs:
     required: false
   command:
     description: "Command to run inside the docker container (default: builds the project)"
-    default: "cmake -DVENDOR=espressif -DBOARD=esp32_wrover_kit -DCOMPILER=xtensa-esp32 -S . -B build -GNinja && idf.py build"
+    default: "cmake -DVENDOR=espressif -DBOARD=esp32_devkitc -DCOMPILER=xtensa-esp32 -S . -B ./build -DAFR_ENABLE_ALL_MODULES=1 -DAFR_ENABLE_TESTS=0 -GNinja && ninja -C ./build -j8"
     required: false
 
 runs:
